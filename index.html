@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="container1">
+        <div class="list">
+            <li id="logo">Portfolio</li>
+
+            <!-- Hamburger Menu Button -->
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="navMenu">
+                <li id="li1"><a href="#container2">Home</a></li>
+                <li id="li1"><a href="#container3">About</a></li>
+                <li id="li1"><a href="#container4">Projects</a></li>
+                <li id="li1"><a href="#container5">Services</a></li>
+                <li id="li1"><a href="#container6">Contact</a></li>
+            </nav>
+
+            <!-- Let's Work Together Button -->
+            <!-- <li id="li2"><a href="#container6">Let's Work Together</a></li> -->
+        </div>
+    </header>
+
+
+
+    <section id="container2">
+        <div class="text-content">
+            <h1 style="margin-top: 200px;
+    font-size: 30px" data-text="&nbsp;Hello, I'm Sravya Keerthana&nbsp;" id="s1">&nbsp;Hello, I'm Sravya
+                Keerthana&nbsp;
+            </h1>
+            <h3>Design. Code. Innovate</h3>
+            <p style="font-size: 40px;" id="s2">I create stunning interactive interfaces & build the future for the web.
+            </p>
+            <div class="d1">
+                <a class="a1" href="https://www.linkedin.com/in/sravya-keerthana-kondamudi-005aa8248/" target="_blank"
+                    title="LinkedIn"><img src="images/linkedin.png" alt=""></a>
+                <a class="a1" href="https://www.instagram.com/sr4vzz.7/" target="_blank" title="Instagram"><img
+                        src="images/instagram.png" alt=""></a>
+                <a class="a1" href="https://github.com/sravyakeerthanak/" target="_blank" title="GitHub"><img
+                        src="images/github.png" alt=""></a>
+                <a class="a1" href="https://www.hackerrank.com/profile/CSE_20NN1A05E4" target="_blank"
+                    title="HackerRank"><img src="images/hackerrank.png" alt=""></a>
+                <button class="a2" title="Download Resume" onclick="openResume()">Resume</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="container3">
+        <div class="left-content">
+            <span class="section-title">About</span>
+            <h1 class="main-heading">An inspiring headline about yourself.</h1>
+            <a href="about.html" class="btn-more">More About Me</a>
+        </div>
+        <div class="right-content">
+            <p>
+                I'm Sravya Keerthana.K, a passionate and dedicated Tech enthusiastic based in India. I recently
+                graduated with a degree in Computer Science and Engineering from VNITSW, where I
+                built a strong foundation in web technologies and software development. My expertise lies in creating
+                modern, interactive, and user-friendly websites and web applications using frontend languages. I am
+                highly proficient in translating ideas into visually appealing and functional digital experiences.
+            </p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/sravyakeerthanak/" target="_blank" title="GitHub"><img src="images/github.png"
+                    alt=""></a>
+            <a href="https://www.instagram.com/sr4vzz.7/" target="_blank" title="Instagram"><img
+                    src="images/instagram.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/sravya-keerthana-kondamudi-005aa8248/" target="_blank"
+                title="LinkedIn"><img src="images/linkedin.png" alt=""></a>
+            <a href="https://www.hackerrank.com/profile/CSE_20NN1A05E4" target="_blank" title="HackerRank"><img
+                    src="images/hackerrank.png" alt=""></a>
+        </div>
+    </section>
+
+    <section id="container4">
+        <h2 class="section-heading">My Projects</h2>
+        <div class="project-card">
+            <div class="project-info">
+                <h2 class="project-title">Vehicle Wrong Way Detection</h2>
+                <p class="project-description">
+                    I have developed a robust vehicle detection system using YOLO, achieving a high accuracy rate of 90%
+                    in localizing vehicles within video frames. By implementing CNN-based methods, I optimized real-time
+                    tracking capabilities, significantly reducing incident detection times by 25%. Additionally, I
+                    designed and integrated a sophisticated database system to efficiently store and manage traffic flow
+                    data extracted from CCTV feeds. These accomplishments showcase my expertise in computer vision,
+                    real-time analytics, and database integration, demonstrating my ability to innovate and enhance road
+                    safety technologies.
+
+                </p>
+                <a href="https://github.com/sravyakeerthanak/" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-image">
+                <img src="images/Vehicle.png" alt="Project Image">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <h2 class="project-title">Grocery store</h2>
+                <p class="project-description">
+                    I developed RESTful APIs using Flask to streamline backend-to-frontend integration, improving data
+                    flow efficiency by 30%. Additionally, I designed an intuitive front-end interface for seamless
+                    product management, enhancing user satisfaction by 20%. To further optimize performance, I refined
+                    MySQL queries for faster product and order data retrieval, reducing load time by 15%. These efforts
+                    highlight my expertise in full-stack development, API design, and database optimization to create
+                    efficient and user-friendly applications.
+                </p>
+                <a href="https://github.com/sravyakeerthanak/Grocery-store-management-system/tree/main"
+                    class="github-link" target="_blank">View
+                    on GitHub</a>
+            </div>
+            <div class="project-image">
+                <img src="images/grocery.png" alt="Project Image">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <h2 class="project-title">Hype Learn</h2>
+                <p class="project-description">
+                    The objective of Hype Learn is to create a free, accessible, and interactive e-learning platform
+                    that supports students in preparing for competitive exams and building strong foundational knowledge
+                    in programming and computer science. The platform focuses on simplifying complex topics, encouraging
+                    daily practice, and offering round-the-clock support to enhance the overall learning experience.
+                </p>
+                <a href="https://github.com/sravyakeerthanak/Hype-Learn" class="github-link" target="_blank">View on
+                    GitHub</a>
+            </div>
+            <div class="project-image">
+                <img src="images/hypelearn.png" alt="Project Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="container5">
+        <h2 class="section-head">My Services</h2>
+        <p class="section-description">As a web developer, I specialize in creating visually stunning and highly
+            interactive websites tailored to user needs. From responsive front-end designs to seamless backend
+            integrations, I ensure smooth functionality and optimal performance. </p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h6 class="service-name">UI Design</h6>
+                <p>I create well-structured and visually appealing unordered lists (UL) to enhance content readability
+                    and organization. By using custom CSS styles, I design lists with unique icons, proper spacing, and
+                    responsive layouts that align with modern web aesthetics. </p>
+                <!-- <a href="#" class="learn-more">Learn more</a> -->
+            </div>
+            <div class="service-card">
+                <h6 class="service-name">FrontEnd Developer</h6>
+                <p>As a front-end developer, I specialize in crafting interactive, user-friendly, and visually appealing
+                    web interfaces. I focus on building responsive designs using HTML, CSS, and JavaScript while
+                    leveraging modern frameworks like React for dynamic functionality. </p>
+                <!-- <a href="#" class="learn-more">Learn more</a> -->
+            </div>
+            <div class="service-card">
+                <h6 class="service-name">JavaScript Developer</h6>
+                <p>As a JavaScript developer, I specialize in building dynamic, interactive, and high-performance web
+                    applications. With expertise in modern frameworks like React, I create seamless user experiences by
+                    implementing efficient front-end logic, API integrations, and real-time functionalities. </p>
+                <!-- <a href="#" class="learn-more">Learn more</a> -->
+            </div>
+            <div class="service-card">
+                <h6 class="service-name">Web Developer</h6>
+                <p>I am a web developer who loves creating beautiful and functional websites. I build responsive and
+                    user-friendly designs using HTML, CSS, and JavaScript. Whether it’s a simple webpage or a complex
+                    web application, I focus on making it fast, interactive, and easy to use for everyone.</p>
+                <!-- <a href="#" class="learn-more">Learn more</a> -->
+            </div>
+            <!-- <div class="service-card">
+                <h6 class="service-name">Exterior Design</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+               
+            <div class="service-card">
+                <h6 class="service-name">Space Planning</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+            </div> -->
+        </div>
+    </section>
+
+    <section id="container6">
+        <div class="contact-container">
+            <h1>Send me a message!</h1>
+            <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
+
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f5dada40-e0b1-4683-b5d3-a36c39bb486b">
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                </div>
+
+                <div class="message-box">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message"
+                        placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn btn btn-primary">Shoot →</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="container7">
+        <div class="footer-content">
+            <h2 id="footer-title">Loading...</h2>
+
+
+            <div class="footer-links">
+                <a href="#container2">Home</a>
+                <a href="#container3">About</a>
+                <a href="#container4">Projects</a>
+                <a href="#container5"> Services</a>
+                <a href="#container6">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/sravyakeerthanak/" target="_blank" title="GitHub"><img
+                        src="images/github.png" alt=""></a>
+                <a href="https://www.instagram.com/sr4vzz.7/" target="_blank" title="Instagram"><img
+                        src="images/instagram.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/sravya-keerthana-kondamudi-005aa8248" target="_blank"
+                    title="LinkedIn"><img src="images/linkedin.png" alt=""></a>
+                <a href="https://www.hackerrank.com/profile/CSE_20NN1A05E4" target="_blank" title="HackerRank"><img
+                        src="images/hackerrank.png" alt=""></a>
+            </div>
+
+            <p class="footer-bottom">© sravya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

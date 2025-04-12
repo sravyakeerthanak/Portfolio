@@ -1,0 +1,1228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-bg: rgb(2, 2, 37);
+    --text-color: white;
+    --highlight-color: red;
+}
+
+body {
+    background-color: var(--primary-bg);
+    overflow: auto;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------Header------------------------------ */
+
+/* 
+#container1 {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 20px;
+    transition: padding 0.3s ease, margin 0.3s ease;
+} */
+
+#container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(2, 2, 37);
+    /* Ensure background remains visible */
+    z-index: 1000;
+    /* Ensures it stays above other elements */
+    padding: 15px 20px;
+    /* Adjust padding if needed */
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#logo {
+    /* font-family: "Great Vibes", serif;
+    font-weight: 400; */
+    font-size: 40px;
+    color: white;
+    margin-left: 40px;
+    margin-right: 35px;
+    font-family: "Cinzel Decorative", serif;
+
+}
+
+.menu-toggle {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease-in-out;
+    display: none;
+    /* Hidden by default, shown in mobile */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.nav-links a,
+#li2 a {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(149, 171, 241);
+    text-transform: capitalize;
+    transition: text-transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-family: "Michroma", sans-serif;
+}
+
+.nav-links a:hover {
+    text-transform: uppercase;
+    color: red;
+}
+
+#li2 {
+    margin-left: auto;
+    /*Pushes it to the right */
+    background: rgb(230, 167, 51);
+    /* padding: 20px 25px;
+    border-radius: 5px;
+    margin-right: 40px; */
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-right: 40px;
+    white-space: nowrap;
+}
+
+#li2 a {
+    color: black;
+    font-family: sans-serif;
+}
+
+#li2:hover {
+    background-color: gold;
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        /* Prevents horizontal scroll */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 90px;
+        right: -100%;
+        height: 34vh;
+        background-color: rgb(2, 2, 37);
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        text-align: center;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 18px;
+        /* text-decoration: none; */
+        display: block;
+    }
+
+    .nav-links a:hover {
+        color: rgb(233, 169, 90);
+    }
+
+    /* Show menu when active */
+    .nav-links.active {
+        right: 0;
+        /* Slide menu in */
+    }
+
+    /* Hide "Let's Work Together" button */
+    #li2 {
+        display: none;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* ------------------------------Header------------------------------ */
+
+/* ------------------------------container2------------------------------ */
+
+#container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styling for the text container */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    /* Stacks h1 and p vertically */
+    align-items: center;
+    /* Aligns text to the left */
+    max-width: 100%;
+    /* Ensures it doesn’t take too much space */
+    /* margin-left: -100px; */
+}
+
+#s1 {
+    /* margin-top: 200px;
+    font-size: 30px; */
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    color: transparent;
+    position: relative;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100px;
+    overflow: hidden;
+    color: red;
+    white-space: nowrap;
+    border-right: 2px solid rgb(235, 231, 231);
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px rgb(200, 165, 165));
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+h3 {
+    color: bisque;
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#s2 {
+    /* font-size: 40px; */
+    /* color: rgb(181, 187, 207); */
+    color: white;
+    /* margin-top: 10px; */
+    font-weight: bold;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: "Cinzel Decorative", serif;
+}
+#s1{
+    font-size: 24px; /* Adjust font size for mobile */
+        margin-top: 100px; /* Reduce margin for better spacing */
+        text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #s1 {
+        font-size: 24px;
+        
+    }
+
+    #s2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #s1 {
+        font-size: 20px;
+    }
+
+    #s2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+.d1 {
+    display: flex;
+    gap: 10px;
+    /* Adjust spacing */
+    align-items: stretch;
+    /* Ensures same height */
+    margin-top: 20px;
+}
+
+.a1,
+.a2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    /* Set a fixed height */
+}
+
+.a2 {
+    background-color: rgb(230, 167, 51);
+    padding: 10px;
+    border-radius: 45px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.a2:hover {
+    background-color: gold;
+}
+
+/* Initially hide elements and move them down */
+h3,
+#s2,
+.d1 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Add visible class when page loads */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* Initially hide elements and move them down */
+h3,
+#s2,
+.d1 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Make elements visible when class is added */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* Ensure spacing between elements */
+h3 {
+    margin-bottom: -30px;
+    /* Adjust spacing */
+}
+
+#s2 {
+    margin-top: 0;
+    /* Space below s2 */
+}
+
+.d1 {
+    display: flex;
+    gap: 15px;
+    /* Space between icons */
+    justify-content: center;
+    margin-top: 70px;
+    /* Increase spacing from s2 */
+}
+
+.d1 a {
+    width: 50px;
+    /* Set fixed width */
+    border: 2px solid white;
+    /* Border around each icon */
+    border-radius: 50%;
+    /* Make them circular */
+    height: 50px;
+    /* Set fixed height */
+    transition: all 0.3s ease-in-out;
+}
+
+.d1 a:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* ------------------------------container2------------------------------ */
+
+/* ------------------------------Container3------------------------------ */
+
+#container3 {
+    margin-top: 90px;
+    background-color: rgb(2, 2, 37);
+    color: white;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+}
+
+.left-content {
+    max-width: 40%;
+    text-align: left;
+}
+
+.section-title {
+    color: red;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-heading {
+    font-size: 58px;
+    color: #f5f5f5;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: "Stardos Stencil", system-ui;
+}
+
+.btn-more {
+    /* margin-top: 1005px; */
+    padding: 12px 24px;
+    font-size: 18px;
+    color: black;
+    background: gold;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.btn-more:hover {
+    background: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 10px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e69f3f;
+    border: 2px solid white;
+    /* Border around each icon */
+    border-radius: 50%;
+    /* Make them circular */
+    width: 50px;
+    /* Set fixed width */
+    height: 50px;
+    /* Set fixed height */
+}
+
+.right-content {
+    max-width: 60%;
+    font-size: 25px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+@media screen and (max-width:1024px) {
+    #container3 {
+        flex-direction: column;
+        padding: 30px 4%;
+        align-items: center;
+        /* Center align content */
+        gap: 0px;
+    }
+
+    .left-content,
+    .right-content {
+        max-width: 100%;
+        text-align: center;
+        margin: 40px;
+        padding: 0;
+    }
+
+    .main-heading {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: "Stardos Stencil", system-ui;
+    }
+
+    .btn-more {
+        margin-bottom: -0px;
+    }
+
+    .right-content {
+        margin-top: -30px;
+        /* Reduce spacing above right-content */
+        padding-top: 0;
+    }
+
+    .social-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        margin-top: -55px;
+        /* margin: 0 5px; */
+    }
+}
+
+@media screen and (max-width:710px) {
+    #container3 {
+        flex-direction: column;
+        padding: 30px 4%;
+        align-items: center;
+        /* Center align content */
+        gap: 0px;
+    }
+
+    .left-content,
+    .right-content {
+        max-width: 100%;
+        text-align: center;
+        margin: 40px;
+        padding: 0;
+    }
+
+    .main-heading {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: "Stardos Stencil", system-ui;
+    }
+
+    .btn-more {
+        margin-bottom: 20px;
+    }
+
+    .right-content {
+        margin-top: -20px;
+        /* Reduce spacing above right-content */
+        padding-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        margin-top: -25px;
+        /* margin: 0 5px; */
+    }
+}
+
+/* Initial state - Hidden with transform */
+.left-content,
+.right-content,
+.social-icons {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Move elements down initially */
+    transition: all 1s ease-in-out;
+}
+
+/* Left content slides in from left */
+.left-content {
+    transform: translateX(-100px);
+}
+
+/* Right content comes from bottom */
+.right-content {
+    transform: translateY(100px);
+}
+
+/* Social icons slide in from right */
+.social-icons {
+    transform: translateX(100px);
+}
+
+/* When elements become visible */
+.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* ------------------------------Container3------------------------------ */
+
+/*----------------------------container4--------------------------------------*/
+
+#container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(2, 2, 37) 60%, rgb(245, 230, 112) 50%);
+}
+
+.section-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Stardos Stencil", system-ui;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(173, 69, 31);
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1100px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.project-card:nth-child(even) {
+    transform: translateX(-100%);
+}
+
+/* When the card becomes visible */
+.project-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Move text up animation */
+.project-info {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 1s ease-out 0.3s, opacity 1s ease-out 0.3s;
+}
+
+.project-card.show .project-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(23, 3, 73);
+    font-family: "Cinzel Decorative", serif;
+
+}
+
+.project-description {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+    text-align: justify;
+    font-family: "Fanwood Text", serif;
+}
+
+.github-link {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(34, 5, 59);
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border: 2px solid rgb(34, 5, 59);
+    padding: 10px;
+}
+
+.github-link:hover {
+    background: gold;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .project-info {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    .project-title {
+        font-size: 1.8em;
+        margin-top: 15px;
+        color: rgb(23, 3, 73);
+        font-family: "Cinzel Decorative", serif;
+
+    }
+
+    .project-description {
+        font-size: 1.1em;
+        color: rgb(255, 255, 255);
+        font-family: "Fanwood Text", serif;
+    }
+
+    .github-link {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/*----------------------------container4--------------------------------------*/
+
+/*----------------------------container5--------------------------------------*/
+
+#container5 {
+    background: rgb(2, 2, 37);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.section-head {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-family: "Stardos Stencil", system-ui;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #0c0a34;
+    color: white;
+}
+
+.service-card {
+    border: 1px solid #ddd;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #52d3ae;
+    text-align: center;
+}
+
+.service-card .service-name {
+    margin-bottom: 10px;
+    color: #e95353 !important;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    /* Centering */
+    max-width: 80%;
+    /* Adjust width */
+}
+
+/* Initially hide service cards */
+.service-card {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Move cards down initially */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the cards become visible */
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*----------------------------container5--------------------------------------*/
+
+/*----------------------------container6--------------------------------------*/
+
+#container6 {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+    padding: 20px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-container h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-family: "Stardos Stencil", system-ui;
+}
+
+.contact-container p {
+    color: #666;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    /* margin-bottom: 100px; */
+    margin-top: 100px;
+}
+
+.input-box {
+    flex: 1;
+    text-align: left;
+}
+
+.input-box label,
+.message-box label {
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.input-box input,
+.message-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #999;
+    /* Soft underline */
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: transparent;
+    /* Remove background */
+    color: #f6f6f6;
+    /* Adjust text color */
+}
+
+.input-box input::placeholder,
+.message-box textarea::placeholder {
+    color: #999;
+    /* Light grey placeholder */
+    font-size: 0.95rem;
+}
+
+.input-box input:focus,
+.message-box textarea:focus {
+    border-bottom: 2px solid red;
+    /* Highlighted bottom border on focus */
+}
+
+.message-box textarea {
+    height: 70px;
+    /* Slightly taller textarea */
+    resize: none;
+    overflow-y: auto;
+}
+
+/* Styling for labels */
+.input-box label,
+.message-box label {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Centering input fields */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+/* Make inputs equal width */
+.input-box {
+    flex: 1;
+}
+
+.message-box {
+    margin-top: 50px;
+}
+
+.submit-btn {
+    background: transparent;
+    color: red;
+    border: 2px solid gold;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 40px;
+    transition: 0.3s;
+    display: block;
+    /* Makes the button a block element */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 
+.submit-btn:hover {
+    background: white;
+    color: black;
+} */
+
+@media (max-width: 1024px) {
+    .contact-container {
+        max-width: 90%;
+        /* Reduce width */
+    }
+
+    .contact-container h1 {
+        font-size: 3rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        /* Stack inputs vertically */
+        gap: 15px;
+    }
+}
+
+/* Large mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 95%;
+        /* Adjust width */
+    }
+
+    .contact-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .input-box input,
+    .message-box textarea {
+        font-size: 0.9rem;
+        /* Reduce font size */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .submit-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .contact-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-container h1 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 0.9rem;
+    }
+
+    .input-box label,
+    .message-box label {
+        font-size: 0.8rem;
+    }
+
+    .input-box input,
+    .message-box textarea {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    .submit-btn {
+        font-size: 0.85rem;
+        padding: 7px 14px;
+    }
+}
+
+/*----------------------------container6--------------------------------------*/
+
+/*----------------------------footer--------------------------------------*/
+
+#container7 {
+    background: rgb(34, 176, 119);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    min-height: 250px;
+}
+
+.footer-content h2 {
+    font-size: 29px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: rgb(144, 14, 14);
+    text-decoration: none;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: Gold;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: black;
+    margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Adjust gap between links */
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    /* Set fixed width */
+    height: 50px;
+    /* Set fixed height */
+    border: 2px solid white;
+    /* Border around each icon */
+    border-radius: 50%;
+    /* Make them circular */
+    transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    background-color: rgb(2, 2, 37);
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 24px;
+    /* Adjust icon size */
+    height: 24px;
+}
+
+/* Medium Screens: Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .footer-links a {
+        font-size: 24px;
+        /* Reduce font size */
+    }
+
+    .social-links a {
+        width: 45px;
+        /* Slightly smaller icons */
+        height: 45px;
+    }
+
+    .social-links img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Small Screens: Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    #container7 {
+        padding: 60px 20px;
+    }
+
+    .footer-content h2 {
+        font-size: 22px;
+    }
+
+    .footer-links {
+        gap: 20px;
+        /* Keep horizontal, but reduce gap */
+    }
+
+    .footer-links a {
+        font-size: 22px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra Small Screens: (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer-content h2 {
+        font-size: 20px;
+    }
+
+    .footer-links {
+        gap: 15px;
+        /* Keep spacing but smaller */
+    }
+
+    .footer-links a {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-links img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+/* ---------------------------footer-------------------------------------------- */

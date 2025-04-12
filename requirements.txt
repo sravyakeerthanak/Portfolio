@@ -1,0 +1,8 @@
+Flask==3.1.0
+flask-cors==5.0.1
+opencv-python==4.11.0.86
+numpy==1.26.1
+torch==2.6.0
+ultralytics==8.3.86
+tensorflow==2.17.1
+gunicorn
